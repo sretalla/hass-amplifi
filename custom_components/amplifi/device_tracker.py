@@ -1,4 +1,4 @@
-"""Platform for sensor integration."""
+"""Platform for device_tracker integration."""
 import logging
 
 from homeassistant.helpers.dispatcher import async_dispatcher_connect
@@ -30,7 +30,7 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
 
     @callback
     def async_discover_sensor():
-        """Discover and add a discovered sensor."""
+        """Discover and add a discovered device_tracker."""
         amplifi_devices = {}
         wifi_devices = coordinator.data[WIFI_DEVICES_IDX]
         if wifi_devices:
